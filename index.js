@@ -1,5 +1,5 @@
-const app = document.querySelector("#app");
-const bookshelf = new Bookshelf();
+const shelf = document.querySelector("#shelf");
+const bookshelf = new Bookshelf(); //creates a new instance of bookshelf that accesses this book-data
 for (const bookInfo of bookData){
     const book = new Book(
         bookInfo.author,
@@ -9,4 +9,4 @@ for (const bookInfo of bookData){
     );
     bookshelf.addBook(book);
 }
-app.append(bookshelf.render());
+shelf.append(bookshelf.render());

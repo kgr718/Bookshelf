@@ -1,8 +1,6 @@
-
 ul {
     margin: 0;
     padding: 0;
-    list-style: none;
 }
 
 li {
@@ -10,4 +8,6 @@ li {
     justify-content: center ;
     background-color: blueviolet;
     color: aqua;
+    
 }
+
