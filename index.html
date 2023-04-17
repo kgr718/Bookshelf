@@ -2,16 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Barnes N Not So Noble</title>
 </head>
 <body>
-    <main id="shelf"></main>
-    <script src="js/book-data.js" ></script>
-    <script src="js/book.js"></script>
-    <script src="js/bookshelf.js"></script>
-    <script src="index.js"></script>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Barnes n not so Noble</a>
+        </nav>
+        <nav>
+            <a href="index.html" class = 'current'>|Books|</a>
+            <a href="about.html">|About|</a>
+            <a href="contact.html"id = 'contact'>|Contact|</a>
+        </nav>
+    </header>
+    <div class = 'ugh'>
+        <h1>Ugh, what do you want NOW?</h1>
+        <div>
+            <button class="openButton" onclick="newBookForm()"> Add a book if you want i GUESS</button> 
+            <div class="newBookPopup"> 
+                <div class="formPopup" id="addBookPopup">
+                    <form class="bookForm">
+                        <h2>New Book Entry</h2>
+                        <label for="Title">
+                            <strong>Title</strong>
+                        </label>
+                        <input type="text" id="newTitle" placeholder="Book Title" required>
+                        <label for="Author">
+                            <strong>Author</strong>
+                        </label>
+                        <input type="text" id="newAuthor" placeholder="Last, First" required>
+                        <label for="Subject">
+                            <strong>Subject</strong>
+                        </label>
+                        <input type="text" id="newSubject" placeholder="Subject(s)" required>
+                        <label for="Language">
+                            <strong>Language</strong>
+                        </label>
+                        <input type="text" id="newLanguage" placeholder="language" required>
+                        <div>
+                            <button class="btn completeBook" onclick="bookToAdd()">Add</button>
+                            <button class="btn cancel" onclick="closeBookForm()">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <input type="text" class="userInput" placeholder="What do you want?">
+                <button class ='search'>Search</button>
+            </div>
+        </div>
+    </div>
+    <ul class = "books"></ul>
 </body>
+    <script src ="js/book-data.js"></script>
+    <script src ="js/bookshelf.js"></script>
+    <script src ="js/book.js"></script>
+    <script src ="index.js"></script>
 </html>
